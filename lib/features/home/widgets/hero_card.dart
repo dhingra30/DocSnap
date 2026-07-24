@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class HeroCard extends StatelessWidget {
-  const HeroCard({super.key});
+  final VoidCallback onScanPressed;
+
+  const HeroCard({
+    super.key,
+    required this.onScanPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +48,7 @@ class HeroCard extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           FilledButton.icon(
-            onPressed: () {},
+            onPressed: onScanPressed,
             icon: const Icon(Icons.document_scanner),
             label: const Text("Start Scanning"),
           ),

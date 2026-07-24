@@ -15,11 +15,11 @@ class AppShell extends StatefulWidget {
 class _AppShellState extends State<AppShell> {
   int _selectedIndex = 0;
 
-  final List<Widget> _screens = const [
+  final List<Widget> _screens = [
     HomeScreen(),
-    DocumentsScreen(),
-    AiScreen(),
-    SettingsScreen(),
+    const DocumentsScreen(),
+    const AiScreen(),
+    const SettingsScreen(),
   ];
 
   @override
